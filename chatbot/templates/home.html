@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Bot</title>
+</head>
+<style>
+    body
+    {
+        background: black;
+    }
+
+    .con
+
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+        width: 500px;
+        height: 100px;
+        background-color: rgb(87, 87, 87);
+        border-radius: 20px;
+        margin-left: 400px;
+    }
+    #a
+    {
+        background: rgb(87, 87, 87);
+        border: none;
+        border-radius: 20px;
+        width: 200px;
+        height: 80px;
+        outline: none;
+        color: aliceblue;
+        padding-left: 20px;
+        font-size: 15px;
+
+    }
+    #but
+    {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 200px ;
+        border: none;
+        box-shadow: 1px 1px 10px 10px black;
+    }
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 480px;
+
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+
+    animation: 
+        typing 2s steps(22) forwards, 
+        vanish 0.5s ease-in-out 3s forwards; 
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+    to {
+        width: 22ch;
+    }
+}
+
+@keyframes vanish {
+    to {
+        opacity: 0;
+    }
+}
+h2
+{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 25px;
+    margin-left: 560px;
+}
+
+</style>
+<body>
+    <h2>+ Get plus</h2>
+ <h1>  HI ! how can i help you </h1>
+    <form >
+        <div class="con">
+        <input type="text" id="a" name="a" placeholder="Ask Anything" required>
+        <button id="but" onclick="chan()">⬆️</button>
+        </div>
+      
+
+    </form>
+<script>
+function chan()
+{
+    var btn=document.getElementById('but');
+        btn.textContent=(btn.textContent === "×") ? "⬆️" : "×";
+}
+</script>    
+</body>
+</html>

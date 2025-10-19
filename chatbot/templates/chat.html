@@ -1,0 +1,115 @@
+<html >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Siranjeevi Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+
+        .user-message, .bot-message {
+            margin-bottom: 15px;
+        }
+
+        .user-message {
+            text-align: right;
+        }
+
+        .bot-message {
+            text-align: left;
+        }
+
+        .user-message p, .bot-message p {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+
+        .user-message p {
+            background-color: #cce5ff;
+            color: #0056b3;
+        }
+
+        .bot-message p {
+            background-color: #e2e3e5;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chat with Siranjeevi Bot</h1>
+
+        <div class="chat-box">
+            {% if user_input %}
+                <div class="user-message">
+                    <p>You: {{ user_input }}</p>
+                </div>
+                <div class="bot-message">
+                    <p>Bot: {{ bot_response }}</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <form method="POST">
+            <input type="text" id="user_input" name="user_input" value="{{ user_input }}" placeholder="Say something...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
